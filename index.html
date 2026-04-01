@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Funnel Analysis | Your Name</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #0b1628;
+      color: #ccdcf5;
+      font-family: 'Poppins', sans-serif;
+      font-size: 16px;
+      line-height: 1.75;
+    }
+
+    /* NAVBAR */
+    nav {
+      background-color: #07101f;
+      padding: 18px 60px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid #1a2e4a;
+    }
+    nav .brand {
+      font-size: 16px;
+      font-weight: 700;
+      color: #60a5fa;
+      text-decoration: none;
+    }
+    nav .links a {
+      font-size: 14px;
+      font-weight: 500;
+      color: #6b8ab5;
+      text-decoration: none;
+      margin-left: 28px;
+    }
+    nav .links a:hover {
+      color: #60a5fa;
+    }
+
+    /* PAGE WRAPPER */
+    .wrapper {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 60px 40px 80px;
+    }
+
+    /* BADGE */
+    .badge {
+      display: inline-block;
+      background-color: #112240;
+      color: #60a5fa;
+      border: 1px solid #1a3a6a;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 5px 14px;
+      border-radius: 100px;
+      margin-bottom: 20px;
+    }
+
+    /* HEADINGS */
+    h1 {
+      font-size: 42px;
+      font-weight: 700;
+      color: #ffffff;
+      margin: 0 0 20px 0;
+      line-height: 1.15;
+    }
+    h2 {
+      font-size: 24px;
+      font-weight: 600;
+      color: #ffffff;
+      margin: 48px 0 12px 0;
+    }
+
+    /* PARAGRAPH */
+    p {
+      color: #8aaac8;
+      margin: 0 0 16px 0;
+    }
+
+    /* DIVIDER */
+    hr {
+      border: none;
+      border-top: 1px solid #1a2e4a;
+      margin: 50px 0;
+    }
+
+    /* SECTION LABEL */
+    .label {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: #3b82f6;
+      margin-bottom: 8px;
+    }
+
+    /* BUTTONS */
+    .btn-row {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin: 24px 0;
+    }
+    .btn {
+      display: inline-block;
+      font-family: 'Poppins', sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      padding: 11px 24px;
+      border-radius: 8px;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    .btn-blue {
+      background-color: #2563eb;
+      color: #ffffff;
+    }
+    .btn-blue:hover { background-color: #1d4ed8; }
+    .btn-border {
+      background-color: transparent;
+      color: #60a5fa;
+      border: 1px solid #1a3a6a;
+    }
+    .btn-border:hover { background-color: #112240; }
+
+    /* SCREENSHOT */
+    .screenshot {
+      width: 100%;
+      border-radius: 10px;
+      border: 1px solid #1a2e4a;
+      margin: 20px 0 8px 0;
+      display: block;
+    }
+    .caption {
+      font-size: 12px;
+      color: #3b5278;
+      text-align: center;
+      margin-bottom: 0;
+    }
+
+    /* BULLET LIST */
+    ul {
+      padding-left: 0;
+      list-style: none;
+      margin: 12px 0 0 0;
+    }
+    ul li {
+      color: #8aaac8;
+      padding: 8px 0;
+      border-bottom: 1px solid #112240;
+      padding-left: 18px;
+      position: relative;
+    }
+    ul li::before {
+      content: '›';
+      position: absolute;
+      left: 0;
+      color: #3b82f6;
+      font-weight: 700;
+    }
+    ul li:last-child { border-bottom: none; }
+    ul li strong { color: #ccdcf5; }
+
+    /* FOOTER */
+    footer {
+      background-color: #07101f;
+      border-top: 1px solid #1a2e4a;
+      padding: 28px 60px;
+      text-align: center;
+      font-size: 13px;
+      color: #3b5278;
+    }
+    footer a {
+      color: #60a5fa;
+      text-decoration: none;
+      margin: 0 8px;
+    }
+    footer a:hover { text-decoration: underline; }
+
+    @media (max-width: 600px) {
+      nav { padding: 14px 20px; }
+      nav .links { display: none; }
+      .wrapper { padding: 40px 20px 60px; }
+      h1 { font-size: 28px; }
+      footer { padding: 24px 20px; }
+    }
+
+  </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav>
+  <a class="brand" href="#">Krishi Patel</a>
+</nav>
+
+<!-- PAGE CONTENT -->
+<div class="wrapper">
+
+  <!-- HERO -->
+  <div class="badge">Data Analytics Project · Looker Studio</div>
+  <h1>Funnel Analysis</h1>
+  <p>
+    Most businesses are losing customers — and they don't even know where.
+  </p>
+  <p>
+    I built a complete funnel analysis to show exactly at which stage users drop off,
+    how many actually convert, and what a business can do to fix the leaks.
+    The result is a live, interactive dashboard that anyone with zero technical knowledge
+    can open and understand in seconds.
+  </p>
+
+  <hr />
+
+  <!-- DASHBOARD -->
+  <div id="dashboard">
+    <div class="label">Live Dashboard</div>
+    <h2>See the analysis yourself</h2>
+    <p>
+      This is not a static screenshot. This is a fully interactive Looker Studio dashboard. click through it and explore the data.
+    </p>
+
+    <div class="btn-row">
+      <a class="btn btn-blue"
+         href="https://lookerstudio.google.com/reporting/a4d920d7-7342-4f54-aad7-360ccaec41f6"
+         target="_blank">
+        🔗 Open Live Dashboard →
+      </a>
+      <a class="btn btn-border"
+         href="https://drive.google.com/file/d/1P3AcHCIu42msX54gQSdlmOeOSHlWGhtN/view?usp=drive_link"
+         target="_blank">
+        📄 View Presentation →
+      </a>
+    </div>
+      <img class="screenshot" src="assets/funnel analysis.png" alt="Funnel Analysis Dashboard" />
+      <p class="caption">Funnel Analysis - Looker Studio Dashboard</p>
+
+  </div>
+
+  <hr />
+
+  <!-- ABOUT -->
+  <div id="about">
+    <div class="label">About This Project</div>
+    <h2>What problem does this solve?</h2>
+    <p>
+      Imagine you run a business. A thousand people visit your website. But only 30 of them
+      actually buy something. Where did the other 970 go? At what step did they leave?
+      And most importantly, why?
+    </p>
+    <p>
+      That is exactly what a funnel analysis answers.
+    </p>
+    <p>
+      I took raw customer journey data, analysed every stage of the funnel- from awareness
+      all the way to conversion, and turned it into a clear visual story. No jargon.
+      No complex spreadsheets. Just clean, honest numbers that show what is working and what is not.
+    </p>
+  </div>
+
+  <hr />
+
+  <!-- PROCESS -->
+  <div id="process">
+    <div class="label">How I Did It</div>
+    <h2>Step by step — here is my process</h2>
+    <ul>
+      <li><strong>Collected and cleaned the data</strong> - Organised raw data into a structured, analysis-ready format</li>
+      <li><strong>Identified all funnel stages</strong> - Mapped the full user journey from first touch to final conversion</li>
+      <li><strong>Calculated drop-off rates</strong> - Found exactly where and how many users were leaving at each step</li>
+      <li><strong>Built the Looker Studio dashboard</strong> - Designed an interactive report that anyone can explore in real time</li>
+      <li><strong>Extracted business insights</strong> - Turned the numbers into clear, actionable recommendations</li>
+    </ul>
+  </div>
+
+  <hr />
+
+  <!-- INSIGHTS -->
+  <div id="insights">
+    <div class="label">What I Found</div>
+    <h2>What the data revealed</h2>
+    <ul>
+      <li><strong>The biggest drop-off happens early</strong> - Most users leave in the first 1–2 stages, long before they ever reach the purchase step</li>
+      <li><strong>A small fix can have a big impact</strong> - Even a 10% improvement at the highest drop-off stage can significantly increase final conversions</li>
+      <li><strong>Not all traffic is equal</strong> - Some sources bring visitors who convert well. Others bring volume but almost zero results</li>
+      <li><strong>The data tells you exactly where to invest</strong> - Instead of guessing, a business can now point to a specific stage and fix it with confidence</li>
+    </ul>
+  </div>
+
+  <hr />
+
+  <!-- TOOLS -->
+  <div>
+    <div class="label">Tools & Skills</div>
+    <h2>Built with</h2>
+    <ul>
+      <li><strong>Looker Studio</strong> - Interactive dashboard design and data visualisation</li>
+      <li><strong>Data Cleaning</strong> - Structured and prepared raw data for analysis</li>
+      <li><strong>Data Storytelling</strong> - Translating numbers into clear business decisions</li>
+      <li><strong>Business Insight Reporting</strong> - Recommendations a non-technical leader can act on</li>
+    </ul>
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <strong style="color:#8aaac8">Krishi Patel</strong> · Funnel Analysis Project
+  <br />
+</footer>
+
+</body>
+</html>
